@@ -1,0 +1,19 @@
+package com.tcc.transformer.blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class Birch extends Block 
+{
+
+        public Birch (Material wood) 
+        {
+                super(wood);
+                
+                setCreativeTab(CreativeTabs.tabBlock);
+                setBlockName("birchBlock");
+                setBlockTextureName("tcc:birchblock");
+                
+        }
+}

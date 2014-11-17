@@ -1,0 +1,23 @@
+package com.tcc.transformer.blocks.wood;
+
+import com.tcc.transformer.base.Transformer;
+
+import cpw.mods.fml.common.registry.LanguageRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class Jungle extends Block 
+{
+
+        public Jungle (Material wood) 
+        {
+                super(wood);
+                
+                setCreativeTab(CreativeTabs.tabBlock);
+                setBlockName("jungleBlock");
+                setBlockTextureName("tcc:jungleblock");
+                LanguageRegistry.addName(Transformer.jungleBlock, "Jungle Block");
+                
+        }
+}

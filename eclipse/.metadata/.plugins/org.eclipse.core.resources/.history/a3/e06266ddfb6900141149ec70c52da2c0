@@ -1,0 +1,106 @@
+package com.tcc.transformer.base;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import com.tcc.transformer.items.wood.*;
+
+
+@Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="0.1")
+public class Transformer {
+
+	//@NetworkMod(clientSideRequired=true) // not used in 1.7
+
+	
+			public static Block oakBlock;
+			public static Block birchBlock;
+			public static Block jungleBlock;
+			public static Block spruceBlock;
+			public static Block acadiaBlock;
+			public static Block darkoakBlock;
+			
+			public static Item oakItem;
+			public static Item birchItem;
+			public static Item jungleItem;
+			public static Item spruceItem;
+			public static Item acadiaItem;
+			public static Item darkoakItem;
+			
+			
+	        // The instance of your mod that Forge uses.
+	        @Instance(value = "TCCTransformer")
+	        public static Transformer instance;
+	        
+	        // Says where the client and server 'proxy' code is loaded.
+	        @SidedProxy(clientSide="com.tcc.transformer.client.ClientProxy", serverSide="com.tcc.transformer.base.CommonProxy")
+	        public static CommonProxy proxy;
+	        
+	        @EventHandler // used in 1.6.2
+	        //@PreInit    // used in 1.5.2
+	        public void preInit(FMLPreInitializationEvent event) {
+	                // Stub Method
+	        	
+	        	oakBlock = new com.tcc.transformer.blocks.wood.Oak(Material.wood);
+	        	birchBlock = new com.tcc.transformer.blocks.wood.Birch(Material.wood);
+	        	jungleBlock = new com.tcc.transformer.blocks.wood.Jungle(Material.wood);
+	        	spruceBlock = new com.tcc.transformer.blocks.wood.Spruce(Material.wood);
+	        	acadiaBlock = new com.tcc.transformer.blocks.wood.Acadia(Material.wood);
+	        	darkoakBlock = new com.tcc.transformer.blocks.wood.Darkoak(Material.wood);
+	        	
+	        	acadiaItem =  new com.tcc.transformer.items.wood.Acadia();
+	        	birchItem =  new com.tcc.transformer.items.wood.Birch();
+	        	jungleItem =  new com.tcc.transformer.items.wood.Jungle();
+	        	spruceItem =  new com.tcc.transformer.items.wood.Spruce();
+	        	oakItem =  new com.tcc.transformer.items.wood.Oak();
+	        	darkoakItem =  new com.tcc.transformer.items.wood.Darkoak();
+	        	
+	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
+	        	GameRegistry.registerBlock(birchBlock, "birchBlock");
+	        	GameRegistry.registerBlock(spruceBlock, "spruceBlock");
+	        	GameRegistry.registerBlock(jungleBlock, "jungleBlock");
+	        	GameRegistry.registerBlock(acadiaBlock, "acadiaBlock");
+	        	GameRegistry.registerBlock(darkoakBlock, "darkoakBlock");
+	        }
+	       
+	        
+	        public static CreativeTabs transformerBlock = new CreativeTabs("transformerBlock") {
+	            @Override
+	            @SideOnly(Side.CLIENT)
+	            public Item getTabIconItem() {
+	                return Items.nether_star;
+	            }
+	        };
+	        
+	        public static CreativeTabs transformerItem = new CreativeTabs("transformerItem") {
+	            @Override
+	            @SideOnly(Side.CLIENT)
+	            public Item getTabIconItem() {
+	                return Items.nether_star;
+	            }
+	        };
+	       	        
+	        @EventHandler // used in 1.6.2
+	        //@Init       // used in 1.5.2
+	        public void load(FMLInitializationEvent event) {
+	                proxy.registerRenderers();
+	        }
+	        
+	        @EventHandler // used in 1.6.2
+	        //@PostInit   // used in 1.5.2
+	        public void postInit(FMLPostInitializationEvent event) {
+	                // Stub Method
+	        }
+	}
+

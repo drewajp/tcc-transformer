@@ -1,0 +1,13 @@
+package com.tcc.transformer.base;
+
+import net.minecraft.block.Block;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class BlockBase {
+
+    public static Block OakBlock;
+    
+    OakBlock = new OakBlock(Material.wood);
+    
+    GameRegistry.registerBlock(OakBlock, "oakBlock");
+}

@@ -1,0 +1,22 @@
+package com.tcc.transformer.base;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import com.tcc.transformer.blocks.wood.*;
+
+public class BlockBase {
+
+    public static Block oakBlock;
+    
+    public void preInit(FMLPreInitializationEvent event) {
+    	
+    
+    oakBlock = new Oak(Material.wood);
+    
+    GameRegistry.registerBlock(oakBlock, "oakBlock");
+
+	}
+}
+

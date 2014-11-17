@@ -1,0 +1,22 @@
+package com.tcc.transformer.blocks.wood;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+
+public class Oak extends Block 
+{
+
+        public Oak (Material wood) 
+        {
+                super(wood);
+                
+                setCreativeTab(CreativeTabs.tabBlock);
+                setBlockName("oakBlock");
+                setBlockTextureName("tcc:oakblock");
+
+                
+        }
+
+
+}
