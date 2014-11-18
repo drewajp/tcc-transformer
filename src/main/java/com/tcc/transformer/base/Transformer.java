@@ -20,7 +20,7 @@ import com.tcc.transformer.items.wood.*;
 import com.tcc.transformer.blocks.wood.*;
 
 
-@Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="0.1")
+@Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="0.0.1")
 public class Transformer {
 
 	//@NetworkMod(clientSideRequired=true) // not used in 1.7
