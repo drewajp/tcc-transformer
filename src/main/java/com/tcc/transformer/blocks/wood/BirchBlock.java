@@ -6,16 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Oak extends Block 
+public class BirchBlock extends Block 
 {
 
-        public Oak (Material wood) 
+        public BirchBlock (Material wood) 
         {
                 super(wood);
                 
                 setCreativeTab(Transformer.transformerBlock);
-                setBlockName("oakBlock");
-                setBlockTextureName("tcc:oakblock");
+                setBlockName("birchBlock");
+                setBlockTextureName("tcc:birchblock");
                 
         }
 }

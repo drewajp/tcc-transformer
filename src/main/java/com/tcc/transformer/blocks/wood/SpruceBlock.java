@@ -6,16 +6,16 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Acadia extends Block 
+public class SpruceBlock extends Block 
 {
 
-        public Acadia (Material wood) 
+        public SpruceBlock (Material wood) 
         {
                 super(wood);
                 
                 setCreativeTab(Transformer.transformerBlock);
-                setBlockName("acadiaBlock");
-                setBlockTextureName("tcc:acadiablock");
+                setBlockName("spruceBlock");
+                setBlockTextureName("tcc:spruceblock");
                 
         }
 }

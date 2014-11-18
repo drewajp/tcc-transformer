@@ -6,10 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Jungle extends Block 
+public class JungleBlock extends Block 
 {
 
-        public Jungle (Material wood) 
+        public JungleBlock (Material wood) 
         {
                 super(wood);
                 

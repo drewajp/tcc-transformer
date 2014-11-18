@@ -16,6 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import com.tcc.transformer.items.wood.*;
+import com.tcc.transformer.blocks.wood.*;
 
 
 @Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="0.1")
@@ -59,26 +60,26 @@ public class Transformer {
 	        public void preInit(FMLPreInitializationEvent event) {
 	                // Stub Method
 	        	
-	        	oakBlock = new com.tcc.transformer.blocks.wood.Oak(Material.wood);
-	        	birchBlock = new com.tcc.transformer.blocks.wood.Birch(Material.wood);
-	        	jungleBlock = new com.tcc.transformer.blocks.wood.Jungle(Material.wood);
-	        	spruceBlock = new com.tcc.transformer.blocks.wood.Spruce(Material.wood);
-	        	acadiaBlock = new com.tcc.transformer.blocks.wood.Acadia(Material.wood);
-	        	darkoakBlock = new com.tcc.transformer.blocks.wood.Darkoak(Material.wood);
+	        	oakBlock = new OakBlock(Material.wood);
+	        	birchBlock = new BirchBlock(Material.wood);
+	        	jungleBlock = new JungleBlock(Material.wood);
+	        	spruceBlock = new SpruceBlock(Material.wood);
+	        	acadiaBlock = new AcadiaBlock(Material.wood);
+	        	darkoakBlock = new DarkoakBlock(Material.wood);
 	        	
-	        	acadiaTransformer =  new com.tcc.transformer.items.wood.AcadiaTransformer();
-	        	birchTransformer =  new com.tcc.transformer.items.wood.BirchTransformer();
-	        	jungleTransformer =  new com.tcc.transformer.items.wood.JungleTransformer();
-	        	spruceTransformer =  new com.tcc.transformer.items.wood.SpruceTransformer();
-	        	oakTransformer =  new com.tcc.transformer.items.wood.OakTransformer();
-	        	darkoakTransformer =  new com.tcc.transformer.items.wood.DarkoakTransformer();
+	        	acadiaTransformer =  new AcadiaTransformer();
+	        	birchTransformer =  new BirchTransformer();
+	        	jungleTransformer =  new JungleTransformer();
+	        	spruceTransformer =  new SpruceTransformer();
+	        	oakTransformer =  new OakTransformer();
+	        	darkoakTransformer =  new DarkoakTransformer();
 	        	
-	        	oakSaplingChunk = new com.tcc.transformer.items.wood.OakSaplingChunk();
-	        	spruceSaplingChunk = new com.tcc.transformer.items.wood.SpruceSaplingChunk();
-	        	jungleSaplingChunk = new com.tcc.transformer.items.wood.JungleSaplingChunk();
-	        	acadiaSaplingChunk = new com.tcc.transformer.items.wood.AcadiaSaplingChunk();
-	        	darkoakSaplingChunk = new com.tcc.transformer.items.wood.DarkoakSaplingChunk();
-	        	birchSaplingChunk = new com.tcc.transformer.items.wood.BirchSaplingChunk();
+	        	oakSaplingChunk = new OakSaplingChunk();
+	        	spruceSaplingChunk = new SpruceSaplingChunk();
+	        	jungleSaplingChunk = new JungleSaplingChunk();
+	        	acadiaSaplingChunk = new AcadiaSaplingChunk();
+	        	darkoakSaplingChunk = new DarkoakSaplingChunk();
+	        	birchSaplingChunk = new BirchSaplingChunk();
 	        	
 	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
 	        	GameRegistry.registerBlock(birchBlock, "birchBlock");

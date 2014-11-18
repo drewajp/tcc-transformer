@@ -6,10 +6,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class Darkoak extends Block 
+public class DarkoakBlock extends Block 
 {
 
-        public Darkoak (Material wood) 
+        public DarkoakBlock (Material wood) 
         {
                 super(wood);
                 
