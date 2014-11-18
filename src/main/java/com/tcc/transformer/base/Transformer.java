@@ -146,6 +146,13 @@ public class Transformer {
 	        	GameRegistry.registerItem(acadiaChunk, "acadiaChunk");
 	        	
 	        	GameRegistry.registerItem(magicCrystal, "magicCrystal");
+	        	
+	        	GameRegistry.registerItem(oakPiece, "oakPiece");
+	        	GameRegistry.registerItem(birchPiece, "birchPiece");
+	        	GameRegistry.registerItem(junglePiece, "junglePiece");
+	        	GameRegistry.registerItem(sprucePiece, "sprucePiece");
+	        	GameRegistry.registerItem(darkoakPiece, "darkoakPiece");
+	        	GameRegistry.registerItem(acadiaPiece, "acadiaPiece");
 	        }
 	       
 	        
