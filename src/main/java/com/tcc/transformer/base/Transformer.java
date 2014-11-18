@@ -18,6 +18,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import com.tcc.transformer.items.wood.*;
 import com.tcc.transformer.blocks.wood.*;
+import com.tcc.transformer.items.*;
 
 
 @Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="0.0.1")
@@ -53,6 +54,8 @@ public class Transformer {
 			public static Item birchChunk;
 			public static Item darkoakChunk;
 			public static Item acadiaChunk;
+			
+			public static Item magicCrystal;
 			
 			
 	        // The instance of your mod that Forge uses.
@@ -96,6 +99,8 @@ public class Transformer {
 	        	darkoakChunk = new DarkoakChunk();
 	        	birchChunk = new BirchChunk();
 	        	
+	        	magicCrystal = new MagicCrystal();
+	        	
 	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
 	        	GameRegistry.registerBlock(birchBlock, "birchBlock");
 	        	GameRegistry.registerBlock(spruceBlock, "spruceBlock");
@@ -123,6 +128,8 @@ public class Transformer {
 	        	GameRegistry.registerItem(jungleChunk, "jungleChunk");
 	        	GameRegistry.registerItem(darkoakChunk, "darkoakChunk");
 	        	GameRegistry.registerItem(acadiaChunk, "acadiaChunk");
+	        	
+	        	GameRegistry.registerItem(magicCrystal, "magicCrystal");
 	        }
 	       
 	        
@@ -175,12 +182,12 @@ public class Transformer {
 	            	ItemStack acadiaTransformer = new ItemStack(Transformer.acadiaTransformer);
 	            	ItemStack jungleTransformer = new ItemStack(Transformer.jungleTransformer);
 	            	
-	            	GameRegistry.addRecipe(oakTransformer, "xyx", "y y", "xyx", 'x', oakChunk, 'y', oakSaplingChunk);
-	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "y y", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk);
-	            	GameRegistry.addRecipe(birchTransformer, "xyx", "y y", "xyx", 'x', birchChunk, 'y', birchSaplingChunk);
-	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "y y", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk);
-	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "y y", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk);
-	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "y y", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk);
+	            	GameRegistry.addRecipe(oakTransformer, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal);
+	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "yzy", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk, 'z', magicCrystal);
+	            	GameRegistry.addRecipe(birchTransformer, "xyx", "yzy", "xyx", 'x', birchChunk, 'y', birchSaplingChunk, 'z', magicCrystal);
+	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "yzy", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk, 'z', magicCrystal);
+	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "yzy", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk, 'z', magicCrystal);
+	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "yzy", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk, 'z', magicCrystal);
 	        }
 	        
 	        @EventHandler // used in 1.6.2
