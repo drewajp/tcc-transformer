@@ -46,6 +46,13 @@ public class Transformer {
 			public static Item darkoakSaplingChunk;
 			public static Item birchSaplingChunk;
 			
+			public static Item oakChunk;
+			public static Item spruceChunk;
+			public static Item jungleChunk;
+			public static Item birchChunk;
+			public static Item darkoakChunk;
+			public static Item acadiaChunk;
+			
 			
 	        // The instance of your mod that Forge uses.
 	        @Instance(value = "TCCTransformer")
@@ -81,6 +88,13 @@ public class Transformer {
 	        	darkoakSaplingChunk = new DarkoakSaplingChunk();
 	        	birchSaplingChunk = new BirchSaplingChunk();
 	        	
+	        	oakChunk = new OakChunk();
+	        	spruceChunk = new SpruceChunk();
+	        	jungleChunk = new JungleChunk();
+	        	acadiaChunk = new AcadiaChunk();
+	        	darkoakChunk = new DarkoakChunk();
+	        	birchChunk = new BirchChunk();
+	        	
 	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
 	        	GameRegistry.registerBlock(birchBlock, "birchBlock");
 	        	GameRegistry.registerBlock(spruceBlock, "spruceBlock");
@@ -101,6 +115,13 @@ public class Transformer {
 	        	GameRegistry.registerItem(acadiaSaplingChunk, "acadiaSaplingChunk");
 	        	GameRegistry.registerItem(darkoakSaplingChunk, "darkoakSaplingChunk");
 	        	GameRegistry.registerItem(birchSaplingChunk, "birchSaplingChunk");
+	        	
+	        	GameRegistry.registerItem(oakChunk, "oakChunk");
+	        	GameRegistry.registerItem(birchChunk, "birchChunk");
+	        	GameRegistry.registerItem(spruceChunk, "spruceChunk");
+	        	GameRegistry.registerItem(jungleChunk, "jungleChunk");
+	        	GameRegistry.registerItem(darkoakChunk, "darkoakChunk");
+	        	GameRegistry.registerItem(acadiaChunk, "acadiaChunk");
 	        }
 	       
 	        
