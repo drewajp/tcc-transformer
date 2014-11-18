@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -145,6 +146,41 @@ public class Transformer {
 	        //@Init       // used in 1.5.2
 	        public void load(FMLInitializationEvent event) {
 	                proxy.registerRenderers();
+	                
+	            	ItemStack acadiaBlock = new ItemStack(Transformer.acadiaBlock);
+	            	ItemStack oakBlock = new ItemStack(Transformer.oakBlock);
+	            	ItemStack birchBlock = new ItemStack(Transformer.birchBlock);
+	            	ItemStack darkoakBlock = new ItemStack(Transformer.darkoakBlock);
+	            	ItemStack spruceBlock = new ItemStack(Transformer.spruceBlock);
+	            	ItemStack jungleBlock = new ItemStack(Transformer.jungleBlock);
+	            	
+	            	ItemStack acadiaSaplingChunk = new ItemStack(Transformer.acadiaSaplingChunk);
+	            	ItemStack birchSaplingChunk = new ItemStack(Transformer.birchSaplingChunk);
+	            	ItemStack spruceSaplingChunk = new ItemStack(Transformer.spruceSaplingChunk);
+	            	ItemStack jungleSaplingChunk = new ItemStack(Transformer.jungleSaplingChunk);
+	            	ItemStack darkoakSaplingChunk = new ItemStack(Transformer.darkoakSaplingChunk);
+	            	ItemStack oakSaplingChunk = new ItemStack(Transformer.oakSaplingChunk);
+	            	
+	            	ItemStack acadiaChunk = new ItemStack(Transformer.acadiaChunk);
+	            	ItemStack birchChunk = new ItemStack(Transformer.birchChunk);
+	            	ItemStack jungleChunk = new ItemStack(Transformer.jungleChunk);
+	            	ItemStack darkoakChunk = new ItemStack(Transformer.darkoakChunk);
+	            	ItemStack spruceChunk = new ItemStack(Transformer.spruceChunk);
+	            	ItemStack oakChunk = new ItemStack(Transformer.oakChunk);
+	            	
+	            	ItemStack oakTransformer = new ItemStack(Transformer.oakTransformer);
+	            	ItemStack spruceTransformer = new ItemStack(Transformer.spruceTransformer);
+	            	ItemStack birchTransformer = new ItemStack(Transformer.birchTransformer);
+	            	ItemStack darkoakTransformer = new ItemStack(Transformer.darkoakTransformer);
+	            	ItemStack acadiaTransformer = new ItemStack(Transformer.acadiaTransformer);
+	            	ItemStack jungleTransformer = new ItemStack(Transformer.jungleTransformer);
+	            	
+	            	GameRegistry.addRecipe(oakTransformer, "xyx", "y y", "xyx", 'x', oakChunk, 'y', oakSaplingChunk);
+	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "y y", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk);
+	            	GameRegistry.addRecipe(birchTransformer, "xyx", "y y", "xyx", 'x', birchChunk, 'y', birchSaplingChunk);
+	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "y y", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk);
+	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "y y", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk);
+	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "y y", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk);
 	        }
 	        
 	        @EventHandler // used in 1.6.2
