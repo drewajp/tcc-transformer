@@ -7,6 +7,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -72,7 +73,7 @@ public class Transformer {
 	        public static Transformer instance;
 	        
 	        // Says where the client and server 'proxy' code is loaded.
-	        @SidedProxy(clientSide="com.tcc.transformer.client.ClientProxy", serverSide="com.tcc.transformer.base.CommonProxy")
+	        @SidedProxy(clientSide="com.tcc.transformer.base.ClientProxy", serverSide="com.tcc.transformer.base.CommonProxy")
 	        public static CommonProxy proxy;
 	        
 	        @EventHandler // used in 1.6.2
@@ -176,6 +177,7 @@ public class Transformer {
 	        //@Init       // used in 1.5.2
 	        public void load(FMLInitializationEvent event) {
 	                proxy.registerRenderers();
+
 	                
 	            	ItemStack acadiaBlock = new ItemStack(Transformer.acadiaBlock);
 	            	ItemStack oakBlock = new ItemStack(Transformer.oakBlock);
@@ -219,29 +221,34 @@ public class Transformer {
 	            	ItemStack birchPiece = new ItemStack(Transformer.birchPiece);
 	            	ItemStack junglePiece = new ItemStack(Transformer.junglePiece);
 	            	
-	            	GameRegistry.addRecipe(oakTransformer, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal);
-	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "yzy", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk, 'z', magicCrystal);
-	            	GameRegistry.addRecipe(birchTransformer, "xyx", "yzy", "xyx", 'x', birchChunk, 'y', birchSaplingChunk, 'z', magicCrystal);
-	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "yzy", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk, 'z', magicCrystal);
-	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "yzy", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk, 'z', magicCrystal);
-	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "yzy", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk, 'z', magicCrystal);
 	            	
-	            	GameRegistry.addRecipe(oakSaplingChunk, "xxx", "xyx", "xxx", 'x', oakSapling, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(spruceSaplingChunk, "xxx", "xyx", "xxx", 'x', spruceSapling, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(darkoakSaplingChunk, "xxx", "xyx", "xxx", 'x', darkoakSapling, 'y',  magicCrystal);
-	            	GameRegistry.addRecipe(birchSaplingChunk, "xxx", "xyx", "xxx", 'x', birchSapling, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(jungleSaplingChunk, "xxx", "xyx", "xxx", 'x', jungleSapling, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(acadiaSaplingChunk, "xxx", "xyx", "xxx", 'x', acadiaSapling, 'y', magicCrystal);
 	            	
-	            	GameRegistry.addRecipe(acadiaChunk, "xxx", "xyx", "xxx", 'x', acadiaPiece, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(oakChunk, "xxx", "xyx", "xxx", 'x', oakPiece, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(jungleChunk, "xxx", "xyx", "xxx", 'x', junglePiece, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(darkoakChunk, "xxx", "xyx", "xxx", 'x', darkoakPiece, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(birchChunk, "xxx", "xyx", "xxx", 'x', birchPiece, 'y', magicCrystal);
-	            	GameRegistry.addRecipe(spruceChunk, "xxx", "xyx", "xxx", 'x', sprucePiece, 'y', magicCrystal);
+	            	GameRegistry.addRecipe(oakTransformer, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "yzy", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(birchTransformer, "xyx", "yzy", "xyx", 'x', birchChunk, 'y', birchSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "yzy", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "yzy", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "yzy", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	
+	            	GameRegistry.addRecipe(oakSaplingChunk, "xxx", "xyx", "xxx", 'x', oakSapling, 'y',magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(spruceSaplingChunk, "xxx", "xyx", "xxx", 'x', spruceSapling, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(darkoakSaplingChunk, "xxx", "xyx", "xxx", 'x', darkoakSapling, 'y',  magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(birchSaplingChunk, "xxx", "xyx", "xxx", 'x', birchSapling, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(jungleSaplingChunk, "xxx", "xyx", "xxx", 'x', jungleSapling, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(acadiaSaplingChunk, "xxx", "xyx", "xxx", 'x', acadiaSapling, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	
+	            	GameRegistry.addRecipe(acadiaChunk, "xxx", "xyx", "xxx", 'x', acadiaPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(oakChunk, "xxx", "xyx", "xxx", 'x', oakPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(jungleChunk, "xxx", "xyx", "xxx", 'x', junglePiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(darkoakChunk, "xxx", "xyx", "xxx", 'x', darkoakPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(birchChunk, "xxx", "xyx", "xxx", 'x', birchPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(spruceChunk, "xxx", "xyx", "xxx", 'x', sprucePiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	
+
 	        }
 	        
-	        @EventHandler // used in 1.6.2
+
+			@EventHandler // used in 1.6.2
 	        //@PostInit   // used in 1.5.2
 	        public void postInit(FMLPostInitializationEvent event) {
 	                // Stub Method

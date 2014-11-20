@@ -1,10 +1,8 @@
-package com.tcc.transformer.client;
+package com.tcc.transformer.base;
 
 
 
 import net.minecraftforge.client.MinecraftForgeClient;
-
-import com.tcc.transformer.base.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
         
