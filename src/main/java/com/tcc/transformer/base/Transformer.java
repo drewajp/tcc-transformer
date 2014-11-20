@@ -221,6 +221,13 @@ public class Transformer {
 	            	ItemStack birchPiece = new ItemStack(Transformer.birchPiece);
 	            	ItemStack junglePiece = new ItemStack(Transformer.junglePiece);
 	            	
+	            	ItemStack oakWood = new ItemStack(Blocks.log, 1, 0);
+	            	ItemStack spruceWood = new ItemStack(Blocks.log, 1, 1);
+	            	ItemStack birchWood = new ItemStack(Blocks.log, 1, 2);
+	            	ItemStack jungleWood = new ItemStack(Blocks.log, 1, 3);
+	            	ItemStack acadiaWood = new ItemStack(Blocks.log2, 1, 0);
+	            	ItemStack darkoakWood = new ItemStack(Blocks.log2, 1, 1);
+	            	
 	            	
 	            	
 	            	GameRegistry.addRecipe(oakTransformer, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
@@ -243,6 +250,13 @@ public class Transformer {
 	            	GameRegistry.addRecipe(darkoakChunk, "xxx", "xyx", "xxx", 'x', darkoakPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(birchChunk, "xxx", "xyx", "xxx", 'x', birchPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(spruceChunk, "xxx", "xyx", "xxx", 'x', sprucePiece, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	
+	            	GameRegistry.addRecipe(oakPiece, "xxx", "xyx", "xxx", 'x', oakWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(birchPiece, "xxx", "xyx", "xxx", 'x', birchWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(junglePiece, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(darkoakPiece, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
 	            	
 
 	        }
