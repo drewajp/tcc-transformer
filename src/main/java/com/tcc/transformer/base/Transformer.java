@@ -200,12 +200,12 @@ public class Transformer {
 	            	ItemStack spruceChunk = new ItemStack(Transformer.spruceChunk);
 	            	ItemStack oakChunk = new ItemStack(Transformer.oakChunk);
 	            	
-	            	ItemStack oakTransformer = new ItemStack(Transformer.oakTransformer);
-	            	ItemStack spruceTransformer = new ItemStack(Transformer.spruceTransformer);
-	            	ItemStack birchTransformer = new ItemStack(Transformer.birchTransformer);
-	            	ItemStack darkoakTransformer = new ItemStack(Transformer.darkoakTransformer);
-	            	ItemStack acadiaTransformer = new ItemStack(Transformer.acadiaTransformer);
-	            	ItemStack jungleTransformer = new ItemStack(Transformer.jungleTransformer);
+	            	ItemStack oakTransformerR = new ItemStack(Transformer.oakTransformer);
+	            	ItemStack spruceTransformerR = new ItemStack(Transformer.spruceTransformer);
+	            	ItemStack birchTransformerR = new ItemStack(Transformer.birchTransformer);
+	            	ItemStack darkoakTransformerR = new ItemStack(Transformer.darkoakTransformer);
+	            	ItemStack acadiaTransformerR = new ItemStack(Transformer.acadiaTransformer);
+	            	ItemStack jungleTransformerR = new ItemStack(Transformer.jungleTransformer);
 	            	
 	            	ItemStack oakSapling = new ItemStack(Blocks.sapling, 1, 0);
 	            	ItemStack acadiaSapling = new ItemStack(Blocks.sapling, 1, 4);
@@ -221,21 +221,21 @@ public class Transformer {
 	            	ItemStack birchPiece = new ItemStack(Transformer.birchPiece);
 	            	ItemStack junglePiece = new ItemStack(Transformer.junglePiece);
 	            	
-	            	ItemStack oakWood = new ItemStack(Blocks.log, 1, 0);
-	            	ItemStack spruceWood = new ItemStack(Blocks.log, 1, 1);
-	            	ItemStack birchWood = new ItemStack(Blocks.log, 1, 2);
-	            	ItemStack jungleWood = new ItemStack(Blocks.log, 1, 3);
-	            	ItemStack acadiaWood = new ItemStack(Blocks.log2, 1, 0);
-	            	ItemStack darkoakWood = new ItemStack(Blocks.log2, 1, 1);
+	            	ItemStack oakWood = new ItemStack(Blocks.log, 8, 0);
+	            	ItemStack spruceWood = new ItemStack(Blocks.log, 8, 1);
+	            	ItemStack birchWood = new ItemStack(Blocks.log, 8, 2);
+	            	ItemStack jungleWood = new ItemStack(Blocks.log, 8, 3);
+	            	ItemStack acadiaWood = new ItemStack(Blocks.log2, 8, 0);
+	            	ItemStack darkoakWood = new ItemStack(Blocks.log2, 8, 1);
 	            	
 	            	
 	            	
-	            	GameRegistry.addRecipe(oakTransformer, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(spruceTransformer, "xyx", "yzy", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(birchTransformer, "xyx", "yzy", "xyx", 'x', birchChunk, 'y', birchSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(darkoakTransformer, "xyx", "yzy", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(acadiaTransformer, "xyx", "yzy", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(jungleTransformer, "xyx", "yzy", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(oakTransformerR, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(spruceTransformerR, "xyx", "yzy", "xyx", 'x', spruceChunk, 'y', spruceSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(birchTransformerR, "xyx", "yzy", "xyx", 'x', birchChunk, 'y', birchSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(darkoakTransformerR, "xyx", "yzy", "xyx", 'x', darkoakChunk, 'y', darkoakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(acadiaTransformerR, "xyx", "yzy", "xyx", 'x', acadiaChunk, 'y', acadiaSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(jungleTransformerR, "xyx", "yzy", "xyx", 'x', jungleChunk, 'y', jungleSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
 	            	
 	            	GameRegistry.addRecipe(oakSaplingChunk, "xxx", "xyx", "xxx", 'x', oakSapling, 'y',magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(spruceSaplingChunk, "xxx", "xyx", "xxx", 'x', spruceSapling, 'y', magicCrystal.setContainerItem(magicCrystal));
@@ -251,12 +251,43 @@ public class Transformer {
 	            	GameRegistry.addRecipe(birchChunk, " x ", "xyx", " x ", 'x', birchPiece, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(spruceChunk, " x ", "xyx", " x ", 'x', sprucePiece, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	
-	            	GameRegistry.addRecipe(oakPiece, "xxx", "xyx", "xxx", 'x', oakWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
-	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
-	            	GameRegistry.addRecipe(birchPiece, "xxx", "xyx", "xxx", 'x', birchWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
-	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
-	            	GameRegistry.addRecipe(junglePiece, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
-	            	GameRegistry.addRecipe(darkoakPiece, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', magicCrystal.setContainerItem(magicCrystal));;
+	            	GameRegistry.addRecipe(oakPiece, "xxx", "xyx", "xxx", 'x', oakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(birchPiece, "xxx", "xyx", "xxx", 'x', birchWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(sprucePiece, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(junglePiece, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(darkoakPiece, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	
+	            	GameRegistry.addRecipe(oakWood, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', oakTransformer.setContainerItem(oakTransformer));
+	            	GameRegistry.addRecipe(oakWood, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', oakTransformer.setContainerItem(oakTransformer));
+	            	GameRegistry.addRecipe(oakWood, "xxx", "xyx", "xxx", 'x', birchWood, 'y', oakTransformer.setContainerItem(oakTransformer));
+	            	GameRegistry.addRecipe(oakWood, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', oakTransformer.setContainerItem(oakTransformer));
+	            	GameRegistry.addRecipe(oakWood, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', oakTransformer.setContainerItem(oakTransformer));
+	            	GameRegistry.addRecipe(spruceWood, "xxx", "xyx", "xxx", 'x', oakWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(spruceWood, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(spruceWood, "xxx", "xyx", "xxx", 'x', birchWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(spruceWood, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(spruceWood, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(birchWood, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', birchTransformer.setContainerItem(birchTransformer));
+	            	GameRegistry.addRecipe(birchWood, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', birchTransformer.setContainerItem(birchTransformer));
+	            	GameRegistry.addRecipe(birchWood, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', birchTransformer.setContainerItem(birchTransformer));
+	            	GameRegistry.addRecipe(birchWood, "xxx", "xyx", "xxx", 'x', oakWood, 'y', birchTransformer.setContainerItem(birchTransformer));
+	            	GameRegistry.addRecipe(birchWood, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', birchTransformer.setContainerItem(birchTransformer));
+	            	GameRegistry.addRecipe(jungleWood, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(jungleWood, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(jungleWood, "xxx", "xyx", "xxx", 'x', oakWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(jungleWood, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(jungleWood, "xxx", "xyx", "xxx", 'x', birchWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(darkoakWood, "xxx", "xyx", "xxx", 'x', birchWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
+	            	GameRegistry.addRecipe(darkoakWood, "xxx", "xyx", "xxx", 'x', oakWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
+	            	GameRegistry.addRecipe(darkoakWood, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
+	            	GameRegistry.addRecipe(darkoakWood, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
+	            	GameRegistry.addRecipe(darkoakWood, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
+	            	GameRegistry.addRecipe(acadiaWood, "xxx", "xyx", "xxx", 'x', birchWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
+	            	GameRegistry.addRecipe(acadiaWood, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
+	            	GameRegistry.addRecipe(acadiaWood, "xxx", "xyx", "xxx", 'x', oakWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
+	            	GameRegistry.addRecipe(acadiaWood, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
+	            	GameRegistry.addRecipe(acadiaWood, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	
 
 	        }
