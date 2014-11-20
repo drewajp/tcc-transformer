@@ -301,12 +301,12 @@ public class Transformer {
 	            	GameRegistry.addRecipe(acadiaWood8, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	GameRegistry.addRecipe(acadiaWood8, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	
-	            	GameRegistry.addRecipe(oakBlock, "xxx", "xyx", "xxx", 'x', oakWood, 'y', oakTransformer.setContainerItem(oakTransformer));
-	            	GameRegistry.addRecipe(spruceBlock, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', spruceTransformer.setContainerItem(spruceTransformer));
+	            	GameRegistry.addRecipe(oakBlock, "xxx", "xyx", "xxx", 'x', oakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(spruceBlock, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(birchBlock, "xxx", "xyx", "xxx", 'x', birchWood, 'y', birchTransformer.setContainerItem(birchTransformer));
-	            	GameRegistry.addRecipe(darkoakBlock, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', darkoakTransformer.setContainerItem(darkoakTransformer));
-	            	GameRegistry.addRecipe(acadiaBlock, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
-	            	GameRegistry.addRecipe(jungleBlock, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', jungleTransformer.setContainerItem(jungleTransformer));
+	            	GameRegistry.addRecipe(darkoakBlock, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(acadiaBlock, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(jungleBlock, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	
 	            	GameRegistry.addRecipe(oakWood64, "xxx", "xyx", "xxx", 'x', spruceBlock, 'y', oakTransformer.setContainerItem(oakTransformer));
 	            	GameRegistry.addRecipe(oakWood64, "xxx", "xyx", "xxx", 'x', acadiaBlock, 'y', oakTransformer.setContainerItem(oakTransformer));
