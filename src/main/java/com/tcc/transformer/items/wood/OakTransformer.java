@@ -12,7 +12,7 @@ public class OakTransformer extends Item {
         maxStackSize = 1;
         setCreativeTab(Transformer.transformerItem);
         setUnlocalizedName("oakItem");
-        setTextureName("tcc:oak");
+        setTextureName("tcc:oakitem");
         setMaxDamage(128);
 
     }

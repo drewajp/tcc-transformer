@@ -11,7 +11,7 @@ public class AcadiaTransformer extends Item {
                 maxStackSize = 1;
                 setCreativeTab(Transformer.transformerItem);
                 setUnlocalizedName("acadiaItem");
-                setTextureName("tcc:acadia");
+                setTextureName("tcc:acadiaitem");
                 setMaxDamage(128);
    
         }

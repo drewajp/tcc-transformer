@@ -12,7 +12,7 @@ public class SpruceTransformer extends Item {
         maxStackSize = 1;
         setCreativeTab(Transformer.transformerItem);
         setUnlocalizedName("spruceItem");
-        setTextureName("tcc:spruce");
+        setTextureName("tcc:spruceitem");
         setMaxDamage(128);
 
     }

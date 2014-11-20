@@ -12,7 +12,7 @@ public class JungleTransformer extends Item {
         maxStackSize = 1;
         setCreativeTab(Transformer.transformerItem);
         setUnlocalizedName("jungleItem");
-        setTextureName("tcc:jungle");
+        setTextureName("tcc:jungleitem");
         setMaxDamage(128);
 
     }

@@ -12,7 +12,7 @@ public class DarkoakTransformer extends Item {
         maxStackSize = 1;
         setCreativeTab(Transformer.transformerItem);
         setUnlocalizedName("darkoakItem");
-        setTextureName("tcc:darkoak");
+        setTextureName("tcc:darkoakitem");
         setMaxDamage(128);
 
     }

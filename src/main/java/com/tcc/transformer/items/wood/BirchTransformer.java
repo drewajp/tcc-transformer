@@ -12,7 +12,7 @@ public class BirchTransformer extends Item {
         maxStackSize = 1;
         setCreativeTab(Transformer.transformerItem);
         setUnlocalizedName("birchItem");
-        setTextureName("tcc:birch");
+        setTextureName("tcc:birchitem");
         setMaxDamage(128);
     }
             
