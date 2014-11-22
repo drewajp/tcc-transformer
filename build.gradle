@@ -17,9 +17,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.0.1"
+version = "1.0"
 group= "com.tcc.transformer.base" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "TCCTransformer"
+archivesBaseName = "TCC"
 
 minecraft {
     version = "1.7.10-10.13.2.1230"

@@ -11,7 +11,7 @@ public class DarkoakPiece extends Item {
                 maxStackSize = 16;
                 setCreativeTab(Transformer.transformerItem);
                 setUnlocalizedName("darkoakPiece");
-                setTextureName("tcc:darkoakPiece");
+                setTextureName("tcc:darkoakpiece");
    
         }
 }

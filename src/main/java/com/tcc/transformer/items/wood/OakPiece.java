@@ -11,7 +11,7 @@ public class OakPiece extends Item {
                 maxStackSize = 16;
                 setCreativeTab(Transformer.transformerItem);
                 setUnlocalizedName("oakPiece");
-                setTextureName("tcc:oakPiece");
+                setTextureName("tcc:oakpiece");
    
         }
 }
