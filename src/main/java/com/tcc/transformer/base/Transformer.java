@@ -20,6 +20,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 import com.tcc.transformer.items.wood.*;
+import com.tcc.transformer.blocks.*;
 import com.tcc.transformer.blocks.wood.*;
 import com.tcc.transformer.items.*;
 
@@ -36,6 +37,8 @@ public class Transformer {
 			public static Block spruceBlock;
 			public static Block acadiaBlock;
 			public static Block darkoakBlock;
+			
+			public static Block mineralBlock;
 			
 			public static Item oakTransformer;
 			public static Item birchTransformer;
@@ -110,6 +113,7 @@ public class Transformer {
 	        	birchChunk = new BirchChunk();
 	        	
 	        	magicCrystal = new MagicCrystal();
+	        	mineralBlock = new MineralBlock(Material.rock);
 	        	
 	        	oakPiece = new OakPiece();
 	        	acadiaPiece = new AcadiaPiece();
@@ -154,6 +158,8 @@ public class Transformer {
 	        	GameRegistry.registerItem(sprucePiece, "sprucePiece");
 	        	GameRegistry.registerItem(darkoakPiece, "darkoakPiece");
 	        	GameRegistry.registerItem(acadiaPiece, "acadiaPiece");
+	        	
+	        	GameRegistry.registerBlock(mineralBlock, "mineralBlock");
 	        }
 	       
 	        
@@ -239,6 +245,16 @@ public class Transformer {
 	            	ItemStack jungleWood64 = new ItemStack(Blocks.log, 64, 3);
 	            	ItemStack acadiaWood64 = new ItemStack(Blocks.log2, 64, 0);
 	            	ItemStack darkoakWood64 = new ItemStack(Blocks.log2, 64, 1);
+	            	
+	            	ItemStack diamond = new ItemStack(Items.diamond);
+	            	ItemStack coal = new ItemStack(Items.coal);
+	            	ItemStack iron = new ItemStack(Items.iron_ingot);
+	            	ItemStack gold = new ItemStack(Items.gold_ingot);
+	            	ItemStack lapis = new ItemStack(Items.dye, 1, 4);
+	            	ItemStack redstone = new ItemStack(Blocks.redstone_block);
+	            	
+	            	ItemStack mineralBlock = new ItemStack(Transformer.mineralBlock);
+	            	ItemStack crystal = new ItemStack(Transformer.magicCrystal);
 
 	            	
 	            	
@@ -338,6 +354,9 @@ public class Transformer {
 	            	GameRegistry.addRecipe(acadiaWood64, "xxx", "xyx", "xxx", 'x', oakBlock, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	GameRegistry.addRecipe(acadiaWood64, "xxx", "xyx", "xxx", 'x', spruceBlock, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	GameRegistry.addRecipe(acadiaWood64, "xxx", "xyx", "xxx", 'x', jungleBlock, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
+	            	
+	            	GameRegistry.addRecipe(mineralBlock, "cgc", "ldl", "igi", 'c', coal, 'g', gold, 'l', lapis, 'd', diamond, 'i', iron);
+	            	GameRegistry.addRecipe(crystal, "bbb", "brb", "bbb", 'b', mineralBlock, 'r', redstone);
 	            	
 
 	        }
