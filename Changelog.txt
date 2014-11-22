@@ -1,3 +1,7 @@
 PLEASE REPORT BUGS TO DREW TO MAKE HIS LIFE EASIER
-
+1.0- Wood Transformers done!
 0.0.1- Original Version
+
+FUTURE CHANGES
+
+2.0- Sand transformers
