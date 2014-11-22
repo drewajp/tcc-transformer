@@ -32,3 +32,5 @@ tile.birchBlock.name=Birch Block
 tile.jungleBlock.name=Jungle Block
 tile.darkoakBlock.name=Dark Oak Block
 tile.acadiaBlock.name=Acadia Block
+
+tile.magicCrystal.name=Magic Crystal
