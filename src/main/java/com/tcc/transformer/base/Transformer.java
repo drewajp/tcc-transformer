@@ -72,6 +72,7 @@ public class Transformer {
 			public static Item redSandPiece;
 			public static Block sandBlock;
 			public static Block redSandBlock;
+			public static Item blockToken;
 			
 	        // The instance of your mod that Forge uses.
 	        @Instance(value = "TCCTransformer")
@@ -110,14 +111,16 @@ public class Transformer {
 	        	acadiaChunk = new AcadiaChunk();
 	        	darkoakChunk = new DarkoakChunk();
 	        	birchChunk = new BirchChunk();
-	        	magicCrystal = new MagicCrystal();
-	        	mineralBlock = new MineralBlock(Material.rock);
 	        	oakPiece = new OakPiece();
 	        	acadiaPiece = new AcadiaPiece();
 	        	birchPiece = new BirchPiece();
 	        	sprucePiece = new SprucePiece();
 	        	darkoakPiece = new DarkoakPiece();
 	        	junglePiece = new JunglePiece();
+	        	
+	        	magicCrystal = new MagicCrystal();
+	        	mineralBlock = new MineralBlock(Material.rock);
+	        	blockToken = new BlockToken();
 	        	
 	        	redSandTransformer = new RedSandTransformer();
 	        	sandTransformer = new SandTransformer();
@@ -162,6 +165,7 @@ public class Transformer {
 	        	
 	        	GameRegistry.registerBlock(mineralBlock, "mineralBlock");
 	        	GameRegistry.registerItem(magicCrystal, "magicCrystal");
+	        	GameRegistry.registerItem(blockToken, "blockToken");
 	        	
 	        	GameRegistry.registerItem(redSandTransformer,  "redSandTransformer");
 	        	GameRegistry.registerItem(sandTransformer,  "sandTransformer");
@@ -258,9 +262,12 @@ public class Transformer {
 	            	ItemStack gold = new ItemStack(Items.gold_ingot);
 	            	ItemStack lapis = new ItemStack(Items.dye, 1, 4);
 	            	ItemStack redstone = new ItemStack(Blocks.redstone_block);
+	            	ItemStack cobble = new ItemStack(Blocks.cobblestone);
+	            	ItemStack dirt = new ItemStack(Blocks.dirt);
 	            	ItemStack mineralBlock = new ItemStack(Transformer.mineralBlock);
 	            	ItemStack crystal = new ItemStack(Transformer.magicCrystal);
-
+	            	ItemStack token = new ItemStack (Transformer.blockToken);
+	            	
 	            	ItemStack sandTransformerR = new ItemStack(Transformer.sandTransformer);
 	            	ItemStack redSandTransformerR = new ItemStack(Transformer.redSandTransformer);
 	            	ItemStack sandChunk = new ItemStack(Transformer.sandChunk);
@@ -331,12 +338,12 @@ public class Transformer {
 	            	GameRegistry.addRecipe(acadiaWood8, "xxx", "xyx", "xxx", 'x', oakWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	GameRegistry.addRecipe(acadiaWood8, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
 	            	GameRegistry.addRecipe(acadiaWood8, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', acadiaTransformer.setContainerItem(acadiaTransformer));
-	            	GameRegistry.addRecipe(oakBlock, "xxx", "xyx", "xxx", 'x', oakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(spruceBlock, "xxx", "xyx", "xxx", 'x', spruceWood, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(birchBlock, "xxx", "xyx", "xxx", 'x', birchWood, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(darkoakBlock, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(acadiaBlock, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(jungleBlock, "xxx", "xyx", "xxx", 'x', jungleWood, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(oakBlock, "xxx", "xyx", "xxx", 'x', oakWood, 'y', token);
+	            	GameRegistry.addRecipe(spruceBlock, "xxx", "xyx", "xxx", 'x', spruceWood, 'y',  token);
+	            	GameRegistry.addRecipe(birchBlock, "xxx", "xyx", "xxx", 'x', birchWood, 'y',  token);
+	            	GameRegistry.addRecipe(darkoakBlock, "xxx", "xyx", "xxx", 'x', darkoakWood, 'y',  token);
+	            	GameRegistry.addRecipe(acadiaBlock, "xxx", "xyx", "xxx", 'x', acadiaWood, 'y',  token);
+	            	GameRegistry.addRecipe(jungleBlock, "xxx", "xyx", "xxx", 'x', jungleWood, 'y',  token);
 	            	GameRegistry.addRecipe(oakWood64, "xxx", "xyx", "xxx", 'x', spruceBlock, 'y', oakTransformer.setContainerItem(oakTransformer));
 	            	GameRegistry.addRecipe(oakWood64, "xxx", "xyx", "xxx", 'x', acadiaBlock, 'y', oakTransformer.setContainerItem(oakTransformer));
 	            	GameRegistry.addRecipe(oakWood64, "xxx", "xyx", "xxx", 'x', birchBlock, 'y', oakTransformer.setContainerItem(oakTransformer));
@@ -370,6 +377,7 @@ public class Transformer {
 	            	
 	            	GameRegistry.addRecipe(mineralBlock, "cgc", "ldl", "igi", 'c', coal, 'g', gold, 'l', lapis, 'd', diamond, 'i', iron);
 	            	GameRegistry.addRecipe(crystal, "bbb", "brb", "bbb", 'b', mineralBlock, 'r', redstone);
+	            	GameRegistry.addRecipe(token, "cdc", "dcd", "cdc", 'c', cobble, 'd', dirt);
 	            	
 	            	GameRegistry.addRecipe(sandTransformerR, "xxx", "xyx", "xxx", 'x', sandChunk, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(redSandTransformerR, "xxx", "xyx", "xxx", 'x', redSandChunk, 'y', magicCrystal.setContainerItem(magicCrystal));
@@ -381,8 +389,8 @@ public class Transformer {
 	            	GameRegistry.addRecipe(redSand8, "xxx", "xyx", "xxx", 'x', sand, 'y', redSandTransformer.setContainerItem(sandTransformer));
 	            	GameRegistry.addRecipe(redSand64, "xxx", "xyx", "xxx", 'x', sandBlock, 'y', redSandTransformer.setContainerItem(redSandTransformer));
 	            	GameRegistry.addRecipe(sand64, "xxx", "xyx", "xxx", 'x', redSandBlock, 'y', sandTransformer.setContainerItem(sandTransformer));
-	            	GameRegistry.addRecipe(sandBlock, "xxx", "xyx", "xxx", 'x', sand, 'y', magicCrystal.setContainerItem(magicCrystal));
-	            	GameRegistry.addRecipe(redSandBlock, "xxx", "xyx", "xxx", 'x', redSand, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(sandBlock, "xxx", "xyx", "xxx", 'x', sand, 'y', token);
+	            	GameRegistry.addRecipe(redSandBlock, "xxx", "xyx", "xxx", 'x', redSand, 'y', token);
 	        }
 	        
 
