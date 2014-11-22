@@ -1,0 +1,34 @@
+item.oakItem.name=Oak Transformer
+item.spruceItem.name=Spruce Transformer
+item.birchItem.name=Birch Transformer
+item.jungleItem.name=Jungle Transformer
+item.darkoakItem.name=Dark Oak Transformer
+item.acadiaItem.name=Acadia Transformer
+
+item.oakChunk.name=Oak Chunk
+item.spruceChunk.name=Spruce Chunk
+item.birchChunk.name=Birch Chunk
+item.jungleChunk.name=Jungle Chunk
+item.darkoakChunk.name=Dark Oak Chunk
+item.acadiaChunk.name=Acadia Chunk
+
+item.oakPiece.name=Oak Piece
+item.sprucePiece.name=Spruce Piece
+item.birchPiece.name=Birch Piece
+item.junglePiece.name=Jungle Piece
+item.darkoakPiece.name=Dark Oak Piece
+item.acadiaPiece.name=Acadia Oak Piece
+
+item.oakSaplingChunk.name=Oak Sapling Chunk
+item.spruceSaplingChunk.name=Spruce Sapling Chunk
+item.birchSaplingChunk.name=Birch Sapling Chunk
+item.jungleSaplingChunk.name=Jungle Sapling Chunk
+item.darkoakSaplingChunk.name=Dark Oak Sapling Chunk
+item.acadiaSaplingChunk.name=Acadia Sapling Chunk
+
+tile.oakBlock.name=Oak Block
+tile.spruceBlock.name=Spruce Block
+tile.birchBlock.name=Birch Block
+tile.jungleBlock.name=Jungle Block
+tile.darkoakBlock.name=Dark Oak Block
+tile.acadiaBlock.name=Acadia Block
