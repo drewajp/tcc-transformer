@@ -24,6 +24,7 @@ import com.tcc.transformer.blocks.*;
 import com.tcc.transformer.blocks.wood.*;
 import com.tcc.transformer.items.*;
 import com.tcc.transformer.items.sand.*;
+import com.tcc.transformer.blocks.sand.*;
 
 
 @Mod(modid="TCCTransformer", name="The TCC Transformer Mod", version="1.0")
@@ -69,6 +70,8 @@ public class Transformer {
 			public static Item redSandChunk;
 			public static Item sandPiece;
 			public static Item redSandPiece;
+			public static Block sandBlock;
+			public static Block redSandBlock;
 			
 	        // The instance of your mod that Forge uses.
 	        @Instance(value = "TCCTransformer")
@@ -122,6 +125,9 @@ public class Transformer {
 	        	redSandChunk = new RedSandChunk();
 	        	sandPiece = new SandPiece();
 	        	redSandPiece = new RedSandPiece();
+	        	sandBlock = new SandBlock(Material.sand);
+	        	redSandBlock = new RedSandBlock(Material.sand);
+	        	
 	        	
 	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
 	        	GameRegistry.registerBlock(birchBlock, "birchBlock");
@@ -163,6 +169,8 @@ public class Transformer {
 	        	GameRegistry.registerItem(redSandChunk,  "redSandChunk");
 	        	GameRegistry.registerItem(redSandPiece,  "redSandPiece");
 	        	GameRegistry.registerItem(sandPiece, "sandPiece");
+	        	GameRegistry.registerBlock(sandBlock, "sandBlock");
+	        	GameRegistry.registerBlock(redSandBlock, "redSandBlock");
 	        	
 	        }
 	       
@@ -263,6 +271,10 @@ public class Transformer {
 	            	ItemStack redSand = new ItemStack(Blocks.sand, 1, 1);
 	            	ItemStack sand8 = new ItemStack(Blocks.sand, 8, 0);
 	            	ItemStack redSand8 = new ItemStack(Blocks.sand, 8, 1);
+	            	ItemStack sand64 = new ItemStack(Blocks.sand, 64, 0);
+	            	ItemStack redSand64 = new ItemStack(Blocks.sand, 64, 1);
+	            	ItemStack redSandBlock = new ItemStack(Transformer.redSandBlock);
+	            	ItemStack sandBlock = new ItemStack(Transformer.sandBlock);
 	            	
 	            	
 	            	GameRegistry.addRecipe(oakTransformerR, "xyx", "yzy", "xyx", 'x', oakChunk, 'y', oakSaplingChunk, 'z', magicCrystal.setContainerItem(magicCrystal));
@@ -367,7 +379,10 @@ public class Transformer {
 	            	GameRegistry.addRecipe(redSandPiece, "xxx", "xyx", "xxx", 'x', redSand, 'y', magicCrystal.setContainerItem(magicCrystal));
 	            	GameRegistry.addRecipe(sand8, "xxx", "xyx", "xxx", 'x', redSand, 'y', sandTransformer.setContainerItem(sandTransformer));
 	            	GameRegistry.addRecipe(redSand8, "xxx", "xyx", "xxx", 'x', sand, 'y', redSandTransformer.setContainerItem(sandTransformer));
-
+	            	GameRegistry.addRecipe(redSand64, "xxx", "xyx", "xxx", 'x', sandBlock, 'y', redSandTransformer.setContainerItem(redSandTransformer));
+	            	GameRegistry.addRecipe(sand64, "xxx", "xyx", "xxx", 'x', redSandBlock, 'y', sandTransformer.setContainerItem(sandTransformer));
+	            	GameRegistry.addRecipe(sandBlock, "xxx", "xyx", "xxx", 'x', sand, 'y', magicCrystal.setContainerItem(magicCrystal));
+	            	GameRegistry.addRecipe(redSandBlock, "xxx", "xyx", "xxx", 'x', redSand, 'y', magicCrystal.setContainerItem(magicCrystal));
 	        }
 	        
 
