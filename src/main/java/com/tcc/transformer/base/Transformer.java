@@ -145,6 +145,8 @@ public class Transformer {
 	        	redSandstonePiece = new RedSandstonePiece();
 	        	sandstoneTransformer = new SandstoneTransformer();
 	        	redSandstoneTransformer = new RedSandstoneTransformer();
+	        	sandstoneBlock = new SandstoneBlock(Material.rock);
+	        	redSandstoneBlock = new RedSandstoneBlock(Material.rock);
 	        	
 	        	
 	        	
@@ -197,6 +199,8 @@ public class Transformer {
 	        	GameRegistry.registerItem(redSandstonePiece, "redSandstonePiece");
 	        	GameRegistry.registerItem(redSandstoneChunk, "redSandstoneChunk");
 	        	GameRegistry.registerItem(redSandstoneTransformer, "redSandstoneTransformer");
+	        	GameRegistry.registerBlock(sandstoneBlock, "sandstoneBlock");
+	        	GameRegistry.registerBlock(redSandstoneBlock, "redSandstoneBlock");
 	        }
 	       
 	        
