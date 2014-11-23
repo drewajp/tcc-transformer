@@ -10,8 +10,8 @@ public class SandPiece extends Item {
         public SandPiece() {
                 maxStackSize = 16;
                 setCreativeTab(Transformer.transformerItem);
-                setUnlocalizedName("sandChunk");
-                setTextureName("tcc:sandchunk");
+                setUnlocalizedName("sandPiece");
+                setTextureName("tcc:sandpiece");
    
         }
 }

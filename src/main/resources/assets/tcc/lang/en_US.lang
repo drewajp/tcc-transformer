@@ -33,4 +33,18 @@ tile.jungleBlock.name=Jungle Block
 tile.darkoakBlock.name=Dark Oak Block
 tile.acadiaBlock.name=Acadia Block
 
-tile.magicCrystal.name=Magic Crystal
+item.magicCrystal.name=Magic Crystal
+tile.mineralBlock.name=Mineral Block
+item.blockToken.name=Block Token
+
+tile.sandBlock.name=Sand Block
+tile.redSandBlock.name=Red Sand Block
+item.redSandItem.name=Red Sand Transformer
+item.sandItem.name=Sand Transformer
+item.sandChunk.name=Sand Chunk
+item.redSandChunk.name=Red Sand Chunk
+item.sandPiece.name=Sand Piece
+item.redSandPiece.name=Red Sand Piece
+
+itemGroup.transformerItem=Transformer Items
+itemGroup.transformerBlock=Transformer Blocks
