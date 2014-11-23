@@ -64,6 +64,7 @@ public class Transformer {
 			public static Item birchPiece;
 			public static Item darkoakPiece;
 			public static Item sprucePiece;
+			
 			public static Item redSandTransformer;
 			public static Item sandTransformer;
 			public static Item sandChunk;
@@ -73,6 +74,14 @@ public class Transformer {
 			public static Block sandBlock;
 			public static Block redSandBlock;
 			public static Item blockToken;
+			public static Item sandstoneTransformer;
+			public static Item redSandstoneTransformer;
+			public static Item sandstonePiece;
+			public static Item redSandstonePiece;
+			public static Item sandstoneChunk;
+			public static Item redSandstoneChunk;
+			public static Block sandstoneBlock;
+			public static Block redSandstoneBlock;
 			
 	        // The instance of your mod that Forge uses.
 	        @Instance(value = "TCCTransformer")
@@ -130,6 +139,13 @@ public class Transformer {
 	        	redSandPiece = new RedSandPiece();
 	        	sandBlock = new SandBlock(Material.sand);
 	        	redSandBlock = new RedSandBlock(Material.sand);
+	        	sandstoneChunk = new SandstoneChunk();
+	        	redSandstoneChunk = new RedSandstoneChunk();
+	        	sandstonePiece = new SandstonePiece();
+	        	redSandstonePiece = new RedSandstonePiece();
+	        	sandstoneTransformer = new SandstoneTransformer();
+	        	redSandstoneTransformer = new RedSandstoneTransformer();
+	        	
 	        	
 	        	
 	        	GameRegistry.registerBlock(oakBlock, "oakBlock");
