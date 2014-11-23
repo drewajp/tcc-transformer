@@ -191,7 +191,12 @@ public class Transformer {
 	        	GameRegistry.registerItem(sandPiece, "sandPiece");
 	        	GameRegistry.registerBlock(sandBlock, "sandBlock");
 	        	GameRegistry.registerBlock(redSandBlock, "redSandBlock");
-	        	
+	        	GameRegistry.registerItem(sandstonePiece, "sandstonePiece");
+	        	GameRegistry.registerItem(sandstoneChunk, "sandstoneChunk");
+	        	GameRegistry.registerItem(sandstoneTransformer, "sandstoneTransformer");
+	        	GameRegistry.registerItem(redSandstonePiece, "redSandstonePiece");
+	        	GameRegistry.registerItem(redSandstoneChunk, "redSandstoneChunk");
+	        	GameRegistry.registerItem(redSandstoneTransformer, "redSandstoneTransformer");
 	        }
 	       
 	        
